@@ -1,0 +1,15 @@
+# api id from https://my.telegram.org/ (create new app)
+api_id = 123456
+# <api hash from https://my.telegram.org/>
+api_hash = '7f6sdb786ebf6a8796fa87ad6a8dfe3680e'
+
+# user phone number without a +
+phone = '123456789'
+# from username
+username = 'John'
+
+from_channel_link = 'https://t.me/channel_name_to_forward_from'
+# username to forward msgs to with @ prefix
+to_user = '@dude'
+# seconds interval to poll for new msgs in channel
+poll_interval = 10
