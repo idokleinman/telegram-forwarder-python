@@ -1,7 +1,7 @@
 ## change filename settings.template to settings.py and fill in all values
 
 from telethon import TelegramClient
-# from telethon.errors.rpc_errors_401 import SessionPasswordNeededError
+from telethon.errors import SessionPasswordNeededError
 from telethon.tl.functions.messages import ForwardMessagesRequest
 import time
 from settings import *
