@@ -2,7 +2,8 @@
 
 from telethon import TelegramClient
 from telethon.errors import SessionPasswordNeededError
-from telethon.tl.functions.messages import ForwardMessagesRequest
+# from telethon.tl.functions.messages import ForwardMessagesRequest
+
 import time
 from settings import *
 
@@ -12,10 +13,13 @@ client.connect()
 # Ensure you're authorized
 if not client.is_user_authorized():
     client.send_code_request(phone)
+    if not sign_in_code:
+        print("Use >heroku config:set SIGN_IN_CODE=xxxxx [number you received from telegram notification] to restart dyno")
     try:
-        client.sign_in(phone, input('Enter the code: '))
+        # client.sign_in(phone, input('Enter the code: ')) # requires user typing - cannot run on heroku
+        client.sign_in(phone, sign_in_code)
     except SessionPasswordNeededError:
-        client.sign_in(password=input('Password: '))
+        client.sign_in(password=input('Password: ')) # won't work
 
 # me = client.get_me()
 # print(me)
