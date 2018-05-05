@@ -9,5 +9,3 @@ username = os.getenv("USERNAME")
 from_channel_link = os.getenv("FROM_CHANNEL_LINK")
 to_user = os.getenv("TO_USER")
 poll_interval = int(os.getenv("POLL_INTERVAL"))
-
-sign_in_code = os.getenv("SIGN_IN_CODE")

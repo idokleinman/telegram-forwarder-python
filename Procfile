@@ -1,1 +1,1 @@
-web: pipenv run python app.py
+web: pipenv run python main.py
